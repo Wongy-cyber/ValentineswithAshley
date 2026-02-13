@@ -2082,7 +2082,7 @@
                 </div>
                 <div class="photo-nav photo-nav-left" onclick="previousPhoto()"></div>
                 <div class="photo-nav photo-nav-right" onclick="nextPhoto()"></div>
-                <img id="tinderPhoto" src="images/tinderprofile1.jpg" alt="Photo 1" class="tinder-photo">
+                <img id="tinderPhoto" src="images/tinder-photo1.jpg" alt="Photo 1" class="tinder-photo">
                 <div class="tinder-info">
                     <div class="tinder-name">Brandon, 27</div>
                     <div class="tinder-bio">
@@ -2109,7 +2109,7 @@
     <section id="letter-section">
         <div id="spotify-player">
             <p>Press play to hear something special 🎵</p>
-            <a href="https://open.spotify.com/playlist/2DQdX5qXZG8RoMJ4RYnI4i?si=00a6c1dc34184d44" class="spotify-button">
+            <a href="https://open.spotify.com/playlist/2DQdX5qXZG8RoMJ4RYnI4i?si=50aaaec1605f4d40" class="spotify-button">
                 ▶ Play on Spotify
             </a>
         </div>
@@ -2129,10 +2129,10 @@
             
             <div class="after-letter-content">
                 <div class="music-player">
-                    <h4>Our Playlist ❤️</h4>
+                    <h4>Our Song ❤️</h4>
                     <div class="spotify-embed">
-                        <iframe src="https://open.spotify.com/embed/playlist/2DQdX5qXZG8RoMJ4RYnI4i?si=00a6c1dc34184d44"
-                                width="100%" height="380"
+                        <iframe src="https://open.spotify.com/playlist/2DQdX5qXZG8RoMJ4RYnI4i?si=50aaaec1605f4d40"
+                                width="100%" height="80"
                                 frameborder="0" allowtransparency="true" allow="encrypted-media">
                         </iframe>
                     </div>
@@ -2144,22 +2144,1476 @@
     </section>
     <!-- VALENTINE LETTER SECTION END -->
 
-    <!-- REST OF HTML CONTINUES EXACTLY THE SAME -->
-    <!-- (Including all other sections: game, reasons, pokemon, baking, timeline, surprise, thank you) -->
-    
-    <!-- JAVASCRIPT SECTION -->
+    <!-- ===========================
+         SECTION 1: MINI GAME START
+         =========================== -->
+    <section id="game-section">
+        <div class="game-header">
+            <h1>Tap the hearts ❤️</h1>
+            <p>Catch 20 hearts to unlock something special…</p>
+        </div>
+
+        <div class="score-display">
+            Score: <span id="score">0</span> / 20
+        </div>
+
+        <div id="game-area">
+            <div class="game-complete" id="gameComplete">
+                <h2>You caught my heart the day we met.</h2>
+                <button class="btn-special" onclick="scrollToReasons()">Open Something Special</button>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION 1: MINI GAME END -->
+
+    <!-- ===========================
+         SECTION 2: REASONS I LOVE YOU START
+         =========================== -->
+    <section id="reasons-section">
+        <div class="reasons-card">
+            <h2>Reasons I Love You</h2>
+            
+            <div id="reason-counter">0 of 25 revealed</div>
+            
+            <div id="reason-display">
+                <p id="reason-text">Click below to reveal a reason...</p>
+            </div>
+
+            <button class="btn-primary" id="revealBtn" onclick="revealReason()">Reveal a Reason</button>
+            <br>
+            <button class="btn-primary" onclick="scrollToPokemon()" style="margin-top: 20px;">See Something Cute 💖</button>
+        </div>
+    </section>
+    <!-- SECTION 2: REASONS I LOVE YOU END -->
+
+    <!-- ===========================
+         SECTION 2.5: POKÉMON CARDS START
+         =========================== -->
+    <section id="pokemon-section">
+        <div class="pokemon-header">
+            <h2>Pokémon Love Cards 💖</h2>
+            <p>Tap each card to reveal a special message...</p>
+        </div>
+
+        <div class="pokemon-cards">
+            <div class="pokemon-card" onclick="flipPokemonCard(this)">
+                <div class="pokemon-card-inner">
+                    <div class="pokemon-card-front">
+                        <img src="pokemon-images/pikachu.png" alt="Pikachu" class="pokemon-image">
+                    </div>
+                    <div class="pokemon-card-back">
+                        <p>Sparking mischief, not just electricity ⚡😉</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="flipPokemonCard(this)">
+                <div class="pokemon-card-inner">
+                    <div class="pokemon-card-front">
+                        <img src="pokemon-images/bulbasaur.png" alt="Bulbasaur" class="pokemon-image">
+                    </div>
+                    <div class="pokemon-card-back">
+                        <p>Leaf it to me to steal your heart 🌿😏</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="flipPokemonCard(this)">
+                <div class="pokemon-card-inner">
+                    <div class="pokemon-card-front">
+                        <img src="pokemon-images/charmander.png" alt="Charmander" class="pokemon-image">
+                    </div>
+                    <div class="pokemon-card-back">
+                        <p>Hotter than your morning coffee 🔥☕</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="flipPokemonCard(this)">
+                <div class="pokemon-card-inner">
+                    <div class="pokemon-card-front">
+                        <img src="pokemon-images/jigglypuff.png" alt="Jigglypuff" class="pokemon-image">
+                    </div>
+                    <div class="pokemon-card-back">
+                        <p>Jiggyling my fat ass 🎤😜</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pokemon-card" onclick="flipPokemonCard(this)">
+                <div class="pokemon-card-inner">
+                    <div class="pokemon-card-front">
+                        <img src="pokemon-images/eevee.png" alt="Eevee" class="pokemon-image">
+                    </div>
+                    <div class="pokemon-card-back">
+                        <p>Are you a wild Eevee? 'Cause you just evolved my heart 🐾😏</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pokemon-continue">
+            <button class="btn-primary" onclick="scrollToBaking()">Bake Something Special 🍪</button>
+        </div>
+    </section>
+    <!-- SECTION 2.5: POKÉMON CARDS END -->
+
+    <!-- ===========================
+         SECTION 2.75: BAKING MINI-GAME START
+         =========================== -->
+    <section id="baking-section">
+        <div class="baking-header">
+            <h2>Bake a Heart-Shaped Cookie 🍪</h2>
+            <p>Use the tools below to bake cookies for <span class="ashley-name">Ashley</span>!</p>
+        </div>
+
+        <div id="kitchen">
+            <div id="game-container">
+                <!-- Step 1: Choose Cake Base -->
+                <div class="game-step" id="step-base" style="display:block;">
+                    <h3>Step 1: Choose Your Cake Base 🍰</h3>
+                    <div class="option-buttons">
+                        <button class="option-btn" onclick="selectBase('vanilla')">Vanilla</button>
+                        <button class="option-btn" onclick="selectBase('chocolate')">Chocolate</button>
+                        <button class="option-btn" onclick="selectBase('strawberry')">Strawberry</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Choose Frosting -->
+                <div class="game-step" id="step-frosting" style="display:none;">
+                    <h3>Step 2: Choose Your Frosting 🎂</h3>
+                    <div class="option-buttons">
+                        <button class="option-btn" onclick="selectFrosting('pink')">Pink</button>
+                        <button class="option-btn" onclick="selectFrosting('white')">White</button>
+                        <button class="option-btn" onclick="selectFrosting('chocolate')">Chocolate</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Add Toppings -->
+                <div class="game-step" id="step-toppings" style="display:none;">
+                    <h3>Step 3: Add Toppings ✨</h3>
+                    <div class="option-buttons">
+                        <button class="option-btn" onclick="addTopping('sprinkles', '🎊')">Sprinkles</button>
+                        <button class="option-btn" onclick="addTopping('strawberry', '🍓')">Strawberries</button>
+                        <button class="option-btn" onclick="addTopping('candles', '🕯️')">Candles</button>
+                        <button class="option-btn" onclick="addTopping('hearts', '💖')">Hearts</button>
+                    </div>
+                    <button class="bake-btn" onclick="startMixing()" style="margin-top:20px;">Next: Mix!</button>
+                </div>
+
+                <!-- Cake Preview -->
+                <div class="cake-preview" id="cake-preview">
+                    <div class="cake-base" id="cake-base">
+                        <div class="cake-frosting" id="cake-frosting"></div>
+                        <div id="toppings-container" style="position:relative;"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Mixing -->
+                <div class="game-step" id="step-mixing" style="display:none;">
+                    <h3>Step 4: Mix the Batter! 🥄</h3>
+                    <button class="bake-btn" onclick="mixBatter()">Mix!</button>
+                    <div class="progress-bar-container" id="mix-container">
+                        <div class="progress-bar" id="mix-progress">
+                            <span class="mixing-spoon" id="mixing-spoon">🥄</span>
+                        </div>
+                    </div>
+                    <p style="text-align:center; color:var(--pink-medium);">Progress: <span id="mix-percent">0</span>%</p>
+                </div>
+
+                <!-- Step 5: Baking -->
+                <div class="game-step" id="step-baking" style="display:none;">
+                    <h3>Baking... 🔥</h3>
+                    <div id="oven" class="oven-glow oven-shake" style="position:relative;">
+                        <span style="color: white; font-size: 1.2rem; font-weight: bold;">OVEN</span>
+                        <div class="heat-shimmer"></div>
+                    </div>
+                    <div class="countdown-display" id="countdown">5</div>
+                </div>
+
+                <!-- Final Reveal -->
+                <div class="game-step" id="step-final" style="display:none;">
+                    <div class="final-cake" style="position:relative;">
+                        <div class="cake-preview">
+                            <div class="cake-base" id="final-cake-base">
+                                <div class="cake-frosting" id="final-cake-frosting"></div>
+                                <div id="final-toppings"></div>
+                            </div>
+                        </div>
+                        <div class="cake-name">Ashley 💖</div>
+                        <div class="love-message">You baked this with love 🧁💖</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="baking-message" id="bakingMessage"></div>
+        </div>
+
+        <div class="baking-continue">
+            <button class="btn-primary" onclick="scrollToTimeline()">See Our Story 📖</button>
+        </div>
+    </section>
+    <!-- SECTION 2.75: BAKING MINI-GAME END -->
+
+    <!-- ===========================
+         SECTION 3: OUR STORY TIMELINE START
+         =========================== -->
+    <section id="timeline-section">
+        <div class="timeline-header">
+            <h2>Some of My Favorite Memories</h2>
+        </div>
+
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>When I Swiped Right!</h3>
+                    <p>Best swipe of my life. Who knew a simple right swipe would lead to all of this?</p>
+                    <div class="photo-frame">
+                        <img src="images/photo1.jpg" alt="When I swiped right">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>One of Our First Dates</h3>
+                    <p>Still can't believe you said yes. Kinda nervous<br>👉👈<br>but so glad you kept saying yes to more dates!</p>
+                    <div class="photo-frame">
+                        <img src="images/photo2.jpg" alt="One of our first dates">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Getting You Flowers</h3>
+                    <p>Because you deserve all the flowers, always.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo3.jpg" alt="Getting you flowers">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>More Flowers</h3>
+                    <p>Still haven't run out of reasons to get you flowers.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo4.jpg" alt="More flowers">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Even More Flowers</h3>
+                    <p>Okay, I might have a problem. But you love them, so...</p>
+                    <div class="photo-frame">
+                        <img src="images/photo5.jpg" alt="Even more flowers">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>From Student to Nurse</h3>
+                    <p>Watching you work so hard and achieve your dreams. So incredibly proud of you.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo6.jpg" alt="Student days">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 7 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>You Did It! 🎓</h3>
+                    <p>The day you became a nurse. I've never been prouder of anyone in my life.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo7.jpg" alt="Graduation/nursing">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 8 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>My Birthday</h3>
+                    <p>Thank you for spoiling me on my birthday every year. You always make me feel so special! 🎂</p>
+                    <div class="photo-frame">
+                        <img src="images/photo8.jpg" alt="Birthday celebration">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 9 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Your Birthday!</h3>
+                    <p>Another year older, another year more beautiful.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo9.jpg" alt="Another birthday">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 10 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>And Another!</h3>
+                    <p>I love celebrating you. Every single year.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo10.jpg" alt="Birthday memories">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 11 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Laughing Till We Cry</h3>
+                    <p>Those moments when everything is just THAT funny and we can't stop laughing.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo11.jpg" alt="Laughing together">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 12 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Valentine's Day</h3>
+                    <p>Every Valentine's with you just keeps getting better.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo12.jpg" alt="Valentine's celebration">
+                    </div>
+                    <div class="photo-frame" style="margin-top:15px;">
+                        <img src="images/photo18.jpg" alt="More Valentine's moments">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 13 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>The 16th of Every Month</h3>
+                    <p>Our monthly anniversaries. Because celebrating us once a year just isn't enough! 💕</p>
+                    <div class="photo-frame">
+                        <img src="images/photo13.jpg" alt="Monthly anniversaries">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 14 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Our Anniversaries</h3>
+                    <p>Celebrating another year of us.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo14.jpg" alt="Anniversary">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 15 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Trip to Rotorua</h3>
+                    <p>Adventures together, exploring new places.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo15.jpg" alt="Rotorua trip">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 16 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Trip to Australia</h3>
+                    <p>Traveling the world together.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo16.jpg" alt="Australia trip">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 17 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Watching You Happy</h3>
+                    <p>Your happiness is my favorite thing in the world.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo19.jpg" alt="Watching you happy">
+                    </div>
+                    <div class="photo-frame" style="margin-top:15px;">
+                        <img src="images/photo20.jpg" alt="Your smile">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 18 -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Conquering the Mount</h3>
+                    <p>Reaching new heights together, literally and figuratively.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo21.jpg" alt="Conquering the mount">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 19 (LAST) -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>More Funny Moments</h3>
+                    <p>Because life with you is full of laughter, silly faces, and memories I'll never forget.</p>
+                    <div class="photo-frame">
+                        <img src="images/photo17.jpg" alt="Funny moments">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-footer">
+            <h3>"Here's to a million more memories together ❤️"</h3>
+            <button class="easter-egg-btn" onclick="revealEasterEgg()">psst…</button>
+        </div>
+    </section>
+    <!-- SECTION 3: OUR STORY TIMELINE END -->
+
+    <!-- ===========================
+         HIDDEN SURPRISE SECTION START
+         =========================== -->
+    <section id="hidden-surprise-section" style="display:none;">
+        <div class="surprise-content">
+            <h2>You found it! 💖</h2>
+            <img src="hidden-surprise/surprise.gif" alt="Special surprise for Ashley" class="surprise-gif">
+            <button class="btn-primary" onclick="scrollToThankYou()" style="margin-top: 30px;">One more thing... 💕</button>
+        </div>
+    </section>
+    <!-- HIDDEN SURPRISE SECTION END -->
+
+    <!-- ===========================
+         FINAL THANK YOU SECTION
+         =========================== -->
+    <section id="thank-you-section" style="display:none;">
+        <div class="thank-you-content">
+            <h2>Thank You 💕</h2>
+            <p>Thank you for being you, <span class="ashley-name">Ashley</span>.</p>
+            <p>For every smile, every laugh, every moment we've shared.</p>
+            <p>You make every day brighter just by being in it.</p>
+            <p>I love you for who you are.</p>
+        </div>
+    </section>
+    <!-- FINAL THANK YOU SECTION END -->
+
+    <!-- ===========================
+         JAVASCRIPT
+         =========================== -->
     <script>
-        // Update photoFiles array with new naming
+        // ===========================
+        // ENVELOPE / LETTER SECTION
+        // ===========================
+        let envelopeOpened = false;
+
+        function openEnvelope() {
+            if (envelopeOpened) return;
+            
+            const envelope = document.getElementById('envelope');
+            envelope.classList.add('open');
+            envelopeOpened = true;
+            
+            // Create confetti and hearts
+            createConfetti();
+            
+            // Show continue button after letter animation completes
+            setTimeout(() => {
+                const continueBtn = document.getElementById('continueBtn');
+                if (continueBtn) {
+                    continueBtn.classList.add('show');
+                }
+            }, 1500);
+        }
+
+        function createConfetti() {
+            const colors = ['#ff85a2', '#ffd6e7', '#ffb6c1', '#ff69b4'];
+            const hearts = ['❤️', '💕', '💗', '💖'];
+            
+            for (let i = 0; i < 30; i++) {
+                // Confetti pieces
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.top = '0';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 50);
+                
+                // Heart pops
+                if (i < 15) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'heart-pop';
+                        heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                        heart.style.left = (30 + Math.random() * 40) + '%';
+                        heart.style.top = '50%';
+                        document.body.appendChild(heart);
+                        setTimeout(() => heart.remove(), 2000);
+                    }, i * 100);
+                }
+            }
+        }
+
+        function scrollToGame() {
+            document.getElementById('game-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToTinder() {
+            document.getElementById('tinder-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // ===========================
+        // TINDER SWIPE LOGIC
+        // ===========================
+        let hasSwipedRight = false;
+        let currentPhotoIndex = 0;
+        const totalPhotos = 5;
         const photoFiles = [
-            'images/tinderprofile1.jpg',
-            'images/tinderprofile2.jpg',
-            'images/tinderprofile3.jpg',
-            'images/tinderprofile4.jpg',
-            'images/tinderprofile5.jpg'
+            'images/tinder-photo1.jpg',
+            'images/tinder-photo2.jpg',
+            'images/tinder-photo3.jpg',
+            'images/tinder-photo4.jpg',
+            'images/tinder-photo5.jpg'
         ];
-        
-        // All other JavaScript remains exactly the same
-        // (Full JavaScript code continues here)
+
+        function nextPhoto() {
+            if (currentPhotoIndex < totalPhotos - 1) {
+                currentPhotoIndex++;
+                updatePhoto();
+            }
+        }
+
+        function previousPhoto() {
+            if (currentPhotoIndex > 0) {
+                currentPhotoIndex--;
+                updatePhoto();
+            }
+        }
+
+        function updatePhoto() {
+            const photo = document.getElementById('tinderPhoto');
+            const dots = document.querySelectorAll('.photo-dot');
+            
+            photo.src = photoFiles[currentPhotoIndex];
+            photo.alt = 'Photo ' + (currentPhotoIndex + 1);
+            
+            dots.forEach((dot, index) => {
+                if (index === currentPhotoIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function swipeRight() {
+            if (hasSwipedRight) return;
+            hasSwipedRight = true;
+
+            const card = document.getElementById('tinderCard');
+            const result = document.getElementById('tinderResult');
+            const resultContent = document.getElementById('resultContent');
+
+            // Animate card swiping right
+            card.classList.add('swipe-right');
+
+            // Massive heart confetti
+            setTimeout(() => {
+                createMassiveHeartConfetti();
+                
+                // Vibration
+                if (navigator.vibrate) {
+                    navigator.vibrate([100, 50, 100, 50, 100, 50, 100]);
+                }
+
+                // Show sweet message
+                resultContent.innerHTML = `
+                    <h3>It's a Match! 💕</h3>
+                    <p>Looks like you swiped right on me... again! 😊</p>
+                    <p>Good choice, because I'd swipe right on you every single time. ❤️</p>
+                    <button class="try-again-btn" onclick="scrollToLetter()">Continue to Your Letter →</button>
+                `;
+
+                result.classList.add('show');
+            }, 600);
+        }
+
+        function scrollToLetter() {
+            document.getElementById('letter-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function swipeLeft() {
+            const card = document.getElementById('tinderCard');
+            const result = document.getElementById('tinderResult');
+            const resultContent = document.getElementById('resultContent');
+
+            // Animate card swiping left
+            card.classList.add('swipe-left');
+
+            // Create massive crying emoji rain
+            createCryingEmojiRain();
+
+            // Show funny/dramatic result
+            setTimeout(() => {
+                resultContent.innerHTML = `
+                    <h3>Wait... WHAT?! 😱</h3>
+                    <div class="left-result-gif">😭</div>
+                    <p>You swiped LEFT on me?!</p>
+                    <p>That's it, I'm telling your mom! 😤</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 15px;">
+                        (Just kidding... but seriously, swipe right this time 😅)
+                    </p>
+                    <button class="try-again-btn" onclick="resetTinder()">Try Again (The Right Way)</button>
+                `;
+
+                result.classList.add('show');
+
+                // Vibrate dramatically
+                if (navigator.vibrate) {
+                    navigator.vibrate([200, 100, 200, 100, 500]);
+                }
+            }, 600);
+        }
+
+        function createCryingEmojiRain() {
+            const cryingEmojis = ['😭', '😢', '😿', '💔', '🥺'];
+            
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.className = 'heart-pop';
+                    emoji.textContent = cryingEmojis[Math.floor(Math.random() * cryingEmojis.length)];
+                    emoji.style.left = Math.random() * 100 + '%';
+                    emoji.style.top = (30 + Math.random() * 40) + '%';
+                    emoji.style.position = 'fixed';
+                    emoji.style.fontSize = (25 + Math.random() * 25) + 'px';
+                    emoji.style.zIndex = '9999';
+                    document.body.appendChild(emoji);
+                    setTimeout(() => emoji.remove(), 2000);
+                }, i * 50);
+            }
+        }
+
+        function resetTinder() {
+            const card = document.getElementById('tinderCard');
+            const result = document.getElementById('tinderResult');
+
+            result.classList.remove('show');
+            card.classList.remove('swipe-left', 'swipe-right');
+            hasSwipedRight = false;
+            currentPhotoIndex = 0;
+            updatePhoto();
+            
+            setTimeout(() => {
+                card.style.transform = '';
+                card.style.opacity = '1';
+            }, 500);
+        }
+
+        function createMassiveHeartConfetti() {
+            const hearts = ['❤️', '💕', '💗', '💖', '💝', '💓'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart-pop';
+                    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.top = Math.random() * 50 + '%';
+                    heart.style.position = 'fixed';
+                    heart.style.fontSize = (20 + Math.random() * 30) + 'px';
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 2000);
+                }, i * 40);
+            }
+        }
+
+        // ===========================
+        // FLOATING BACKGROUND HEARTS WITH PARALLAX
+        // ===========================
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const heartSymbols = ['❤️', '💕', '💗', '💖'];
+            const layers = ['layer-1', 'layer-2', 'layer-3'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart ' + layers[Math.floor(Math.random() * layers.length)];
+                heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(heart);
+            }
+            
+            // Parallax scroll effect
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const hearts = document.querySelectorAll('.floating-heart');
+                
+                hearts.forEach((heart, index) => {
+                    const speed = heart.classList.contains('layer-1') ? 0.3 : 
+                                 heart.classList.contains('layer-2') ? 0.5 : 0.7;
+                    const currentTop = parseFloat(heart.style.top || '0');
+                    heart.style.transform = `translateY(${scrollY * speed * 0.1}px)`;
+                });
+            });
+        }
+
+        // ===========================
+        // GAME LOGIC
+        // ===========================
+        let score = 0;
+        const maxScore = 20;
+        let gameActive = true;
+        let spawnInterval;
+
+        function createFallingHeart() {
+            if (!gameActive) return;
+
+            const gameArea = document.getElementById('game-area');
+            const heart = document.createElement('div');
+            heart.className = 'falling-heart';
+            heart.textContent = '❤️';
+            heart.style.left = Math.random() * (gameArea.offsetWidth - 40) + 'px';
+            heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+            
+            heart.addEventListener('click', function() {
+                catchHeart(heart);
+            });
+
+            gameArea.appendChild(heart);
+
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, parseFloat(heart.style.animationDuration) * 1000);
+        }
+
+        function catchHeart(heartElement) {
+            if (!gameActive) return;
+            
+            score++;
+            document.getElementById('score').textContent = score;
+            
+            heartElement.style.transition = 'all 0.3s ease';
+            heartElement.style.transform = 'scale(2)';
+            heartElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                heartElement.remove();
+            }, 300);
+
+            if (score >= maxScore) {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            gameActive = false;
+            clearInterval(spawnInterval);
+            
+            const remainingHearts = document.querySelectorAll('.falling-heart');
+            remainingHearts.forEach(heart => {
+                heart.style.transition = 'all 0.5s ease';
+                heart.style.opacity = '0';
+                setTimeout(() => heart.remove(), 500);
+            });
+
+            setTimeout(() => {
+                document.getElementById('gameComplete').classList.add('show');
+            }, 600);
+        }
+
+        function startGame() {
+            spawnInterval = setInterval(() => {
+                if (gameActive) {
+                    createFallingHeart();
+                }
+            }, 800);
+        }
+
+        // ===========================
+        // REASONS I LOVE YOU LOGIC
+        // ===========================
+        const reasons = [
+            "Your smile lights up my entire world",
+            "The way you laugh at my terrible jokes",
+            "How you always know when I need a hug",
+            "Your kindness to everyone you meet",
+            "You make me feel special",
+            "The way you are sassy and funny",
+            "Your unwavering support in everything I do",
+            "The way you always check on me",
+            "The way you dance at the dinner table",
+            "Your incredible strength and resilience",
+            "The way you hold my arm tightly",
+            "How you make me want to be a better person",
+            "Your beautiful heart and generous spirit",
+            "The way you understand me without words",
+            "The way you're always there for me",
+            "Your passion for the things you love",
+            "The way you say erm when you want something",
+            "How you make me feel safe and loved",
+            "Your cute soft voice",
+            "The way you always believe in me",
+            "The way you know I'm hungry or tired",
+            "You cuddle me and scratch my back",
+            "The way you make me laugh until I cry",
+            "How you're my best friend",
+            "Everything about you, always and forever"
+        ];
+
+        let revealedReasons = [];
+        let availableReasons = [...reasons];
+
+        function revealReason() {
+            if (availableReasons.length === 0) return;
+
+            const reasonText = document.getElementById('reason-text');
+            const counter = document.getElementById('reason-counter');
+            const revealBtn = document.getElementById('revealBtn');
+
+            reasonText.classList.remove('show');
+
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * availableReasons.length);
+                const selectedReason = availableReasons[randomIndex];
+                
+                availableReasons.splice(randomIndex, 1);
+                revealedReasons.push(selectedReason);
+
+                reasonText.textContent = selectedReason;
+                counter.textContent = `${revealedReasons.length} of ${reasons.length} revealed`;
+
+                setTimeout(() => {
+                    reasonText.classList.add('show');
+                }, 50);
+
+                if (availableReasons.length === 0) {
+                    revealBtn.disabled = true;
+                    revealBtn.textContent = 'All Revealed ❤️';
+                }
+            }, 500);
+        }
+
+        // ===========================
+        // POKÉMON CARDS LOGIC
+        // ===========================
+        function flipPokemonCard(card) {
+            card.classList.toggle('flipped');
+            
+            // Create heart pop effect
+            const rect = card.getBoundingClientRect();
+            const heart = document.createElement('div');
+            heart.className = 'heart-pop';
+            heart.textContent = '💖';
+            heart.style.left = rect.left + rect.width / 2 + 'px';
+            heart.style.top = rect.top + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 2000);
+        }
+
+        // ===========================
+        // ENHANCED BAKING GAME LOGIC
+        // ===========================
+        let cakeData = {
+            base: '',
+            frosting: '',
+            toppings: []
+        };
+        let mixProgress = 0;
+        let draggedTopping = null;
+        let toppingOffset = { x: 0, y: 0 };
+        let deviceTiltEnabled = false;
+
+        // Initialize device tilt (iPhone 14 motion effect)
+        function initDeviceTilt() {
+            if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission === 'function') {
+                // iOS 13+ requires permission
+                DeviceOrientationEvent.requestPermission()
+                    .then(response => {
+                        if (response === 'granted') {
+                            enableDeviceTilt();
+                        }
+                    })
+                    .catch(console.error);
+            } else if (window.DeviceOrientationEvent) {
+                // Non-iOS or older iOS
+                enableDeviceTilt();
+            }
+        }
+
+        function enableDeviceTilt() {
+            deviceTiltEnabled = true;
+            window.addEventListener('deviceorientation', handleTilt);
+        }
+
+        function handleTilt(event) {
+            const cakePreview = document.querySelector('.cake-preview.tilt-active');
+            if (!cakePreview) return;
+            
+            const beta = event.beta || 0;  // Front-back tilt (-180 to 180)
+            const gamma = event.gamma || 0; // Left-right tilt (-90 to 90)
+            
+            // Limit tilt effect to be subtle
+            const maxTilt = 15;
+            const tiltX = Math.max(-maxTilt, Math.min(maxTilt, beta / 6));
+            const tiltY = Math.max(-maxTilt, Math.min(maxTilt, gamma / 6));
+            
+            cakePreview.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        }
+
+        function selectBase(type) {
+            cakeData.base = type;
+            
+            // Update visual
+            const cakeBase = document.getElementById('cake-base');
+            const colors = {
+                vanilla: '#fffaf0',
+                chocolate: '#8b4513',
+                strawberry: '#ffb6c1'
+            };
+            cakeBase.style.background = colors[type];
+            
+            // Add vanilla class for border
+            if (type === 'vanilla') {
+                cakeBase.classList.add('vanilla-base');
+            } else {
+                cakeBase.classList.remove('vanilla-base');
+            }
+            
+            cakeBase.style.transform = 'scale(1.05)';
+            setTimeout(() => cakeBase.style.transform = 'scale(1)', 300);
+            
+            // Highlight selected button
+            document.querySelectorAll('#step-base .option-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+            
+            // Move to next step
+            setTimeout(() => {
+                document.getElementById('step-base').style.display = 'none';
+                document.getElementById('step-frosting').style.display = 'block';
+            }, 500);
+        }
+
+        function selectFrosting(type) {
+            cakeData.frosting = type;
+            
+            // Update visual with animation
+            const frosting = document.getElementById('cake-frosting');
+            const colors = {
+                pink: '#ffb6c1',
+                white: '#ffffff',
+                chocolate: '#8b4513'
+            };
+            frosting.style.background = colors[type];
+            
+            // Highlight selected button
+            document.querySelectorAll('#step-frosting .option-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+            
+            // Move to next step
+            setTimeout(() => {
+                document.getElementById('step-frosting').style.display = 'none';
+                document.getElementById('step-toppings').style.display = 'block';
+                
+                // Enable tilt effect
+                document.querySelector('.cake-preview').classList.add('tilt-active');
+                initDeviceTilt();
+            }, 500);
+        }
+
+        function addTopping(type, emoji) {
+            const container = document.getElementById('toppings-container');
+            const topping = document.createElement('div');
+            topping.className = 'cake-topping';
+            topping.textContent = emoji;
+            topping.dataset.type = type;
+            
+            // Random initial position
+            topping.style.left = (Math.random() * 60 + 20) + '%';
+            topping.style.top = (Math.random() * 40 + 10) + '%';
+            
+            container.appendChild(topping);
+            
+            // Make topping draggable
+            makeToppingDraggable(topping);
+            
+            // Add sparkle burst
+            createToppingSparkles(topping);
+            
+            // Vibration feedback (iPhone)
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            // Highlight button
+            event.target.classList.add('selected');
+        }
+
+        function makeToppingDraggable(topping) {
+            // Touch events
+            topping.addEventListener('touchstart', handleTouchStart, { passive: false });
+            topping.addEventListener('touchmove', handleTouchMove, { passive: false });
+            topping.addEventListener('touchend', handleTouchEnd);
+            
+            // Mouse events for desktop
+            topping.addEventListener('mousedown', handleMouseDown);
+        }
+
+        function handleTouchStart(e) {
+            e.preventDefault();
+            draggedTopping = e.target;
+            const touch = e.touches[0];
+            const rect = draggedTopping.getBoundingClientRect();
+            
+            toppingOffset.x = touch.clientX - rect.left;
+            toppingOffset.y = touch.clientY - rect.top;
+            
+            draggedTopping.classList.add('dragging');
+        }
+
+        function handleTouchMove(e) {
+            if (!draggedTopping) return;
+            e.preventDefault();
+            
+            const touch = e.touches[0];
+            const container = draggedTopping.parentElement;
+            const containerRect = container.getBoundingClientRect();
+            
+            let x = touch.clientX - containerRect.left - toppingOffset.x;
+            let y = touch.clientY - containerRect.top - toppingOffset.y;
+            
+            // Keep within container bounds
+            x = Math.max(0, Math.min(x, containerRect.width - 30));
+            y = Math.max(0, Math.min(y, containerRect.height - 30));
+            
+            draggedTopping.style.left = x + 'px';
+            draggedTopping.style.top = y + 'px';
+        }
+
+        function handleTouchEnd(e) {
+            if (!draggedTopping) return;
+            
+            draggedTopping.classList.remove('dragging');
+            draggedTopping.classList.add('placed');
+            
+            // Vibration feedback
+            if (navigator.vibrate) {
+                navigator.vibrate(30);
+            }
+            
+            setTimeout(() => draggedTopping.classList.remove('placed'), 400);
+            draggedTopping = null;
+        }
+
+        function handleMouseDown(e) {
+            draggedTopping = e.target;
+            const rect = draggedTopping.getBoundingClientRect();
+            
+            toppingOffset.x = e.clientX - rect.left;
+            toppingOffset.y = e.clientY - rect.top;
+            
+            draggedTopping.classList.add('dragging');
+            
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+        }
+
+        function handleMouseMove(e) {
+            if (!draggedTopping) return;
+            
+            const container = draggedTopping.parentElement;
+            const containerRect = container.getBoundingClientRect();
+            
+            let x = e.clientX - containerRect.left - toppingOffset.x;
+            let y = e.clientY - containerRect.top - toppingOffset.y;
+            
+            x = Math.max(0, Math.min(x, containerRect.width - 30));
+            y = Math.max(0, Math.min(y, containerRect.height - 30));
+            
+            draggedTopping.style.left = x + 'px';
+            draggedTopping.style.top = y + 'px';
+        }
+
+        function handleMouseUp() {
+            if (!draggedTopping) return;
+            
+            draggedTopping.classList.remove('dragging');
+            draggedTopping.classList.add('placed');
+            
+            setTimeout(() => draggedTopping.classList.remove('placed'), 400);
+            
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+            draggedTopping = null;
+        }
+
+        function createToppingSparkles(element) {
+            const rect = element.getBoundingClientRect();
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = rect.left + rect.width / 2 + (Math.random() - 0.5) * 50 + 'px';
+                    sparkle.style.top = rect.top + rect.height / 2 + (Math.random() - 0.5) * 50 + 'px';
+                    sparkle.style.position = 'fixed';
+                    document.body.appendChild(sparkle);
+                    setTimeout(() => sparkle.remove(), 1000);
+                }, i * 50);
+            }
+        }
+
+        function startMixing() {
+            document.getElementById('step-toppings').style.display = 'none';
+            document.getElementById('step-mixing').style.display = 'block';
+            mixProgress = 0;
+            updateMixProgress();
+        }
+
+        function mixBatter() {
+            mixProgress += 25;
+            updateMixProgress();
+            
+            // Rotate spoon
+            const spoon = document.getElementById('mixing-spoon');
+            spoon.classList.add('rotating');
+            setTimeout(() => spoon.classList.remove('rotating'), 500);
+            
+            // Vibration feedback
+            if (navigator.vibrate) {
+                navigator.vibrate(40);
+            }
+            
+            if (mixProgress >= 100) {
+                // Bowl wiggle
+                const container = document.getElementById('mix-container');
+                container.classList.add('bowl-wiggle');
+                
+                // Perfect mix popup - positioned in center of kitchen container
+                const kitchen = document.getElementById('kitchen');
+                const popup = document.createElement('div');
+                popup.className = 'perfect-mix-popup';
+                popup.textContent = 'Perfect mix! ✨';
+                kitchen.style.position = 'relative';
+                kitchen.appendChild(popup);
+                
+                setTimeout(() => {
+                    popup.remove();
+                    container.classList.remove('bowl-wiggle');
+                }, 1500);
+                
+                setTimeout(() => {
+                    document.getElementById('step-mixing').style.display = 'none';
+                    document.getElementById('step-baking').style.display = 'block';
+                    startBaking();
+                }, 2000);
+            }
+        }
+
+        function updateMixProgress() {
+            document.getElementById('mix-progress').style.width = mixProgress + '%';
+            document.getElementById('mix-percent').textContent = mixProgress;
+        }
+
+        function startBaking() {
+            let countdown = 5;
+            const countdownEl = document.getElementById('countdown');
+            
+            const timer = setInterval(() => {
+                countdown--;
+                countdownEl.textContent = countdown;
+                
+                // Vibration on each count
+                if (navigator.vibrate) {
+                    navigator.vibrate(30);
+                }
+                
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    showFinalCake();
+                }
+            }, 1000);
+        }
+
+        function showFinalCake() {
+            document.getElementById('step-baking').style.display = 'none';
+            document.getElementById('step-final').style.display = 'block';
+            
+            // Copy cake design to final
+            const finalBase = document.getElementById('final-cake-base');
+            const finalFrosting = document.getElementById('final-cake-frosting');
+            const finalToppings = document.getElementById('final-toppings');
+            
+            finalBase.style.background = document.getElementById('cake-base').style.background;
+            finalFrosting.style.background = document.getElementById('cake-frosting').style.background;
+            
+            // Copy toppings
+            const toppings = document.querySelectorAll('#toppings-container .cake-topping');
+            toppings.forEach(topping => {
+                const newTopping = document.createElement('div');
+                newTopping.className = 'cake-topping';
+                newTopping.textContent = topping.textContent;
+                newTopping.style.left = topping.style.left;
+                newTopping.style.top = topping.style.top;
+                finalToppings.appendChild(newTopping);
+            });
+            
+            // Cake bounce animation
+            document.querySelector('#step-final .cake-preview').classList.add('cake-bounce');
+            
+            // Create massive confetti burst
+            createMassiveConfettiBurst();
+            
+            // Sparkle overlay
+            createSparkleOverlay();
+            
+            // Vibration burst
+            if (navigator.vibrate) {
+                navigator.vibrate([100, 50, 100, 50, 100]);
+            }
+            
+            // Show popup after 2 seconds
+            setTimeout(() => {
+                const popup = document.createElement('div');
+                popup.className = 'popup-bubble';
+                popup.textContent = "You're the sweetest thing here.";
+                document.querySelector('.final-cake').appendChild(popup);
+            }, 2000);
+        }
+
+        function createMassiveConfettiBurst() {
+            const colors = ['#ff85a2', '#ffd6e7', '#ffb6c1', '#ff69b4', '#ffcad4'];
+            const hearts = ['❤️', '💕', '💗', '💖', '💝'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.top = '-20px';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.position = 'fixed';
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 30);
+                
+                if (i < 15) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'heart-pop';
+                        heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                        heart.style.left = (20 + Math.random() * 60) + '%';
+                        heart.style.top = '60%';
+                        heart.style.position = 'fixed';
+                        document.body.appendChild(heart);
+                        setTimeout(() => heart.remove(), 2000);
+                    }, i * 80);
+                }
+            }
+        }
+
+        function createSparkleOverlay() {
+            const overlay = document.createElement('div');
+            overlay.className = 'sparkle-overlay';
+            
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = (Math.random() * 100) + '%';
+                sparkle.style.top = (Math.random() * 100) + '%';
+                sparkle.style.animationDelay = (Math.random() * 0.8) + 's';
+                overlay.appendChild(sparkle);
+            }
+            
+            document.body.appendChild(overlay);
+            setTimeout(() => overlay.remove(), 2000);
+        }
+
+        // ===========================
+        // OLD BAKING MINI-GAME LOGIC (REMOVED)
+        // ===========================
+
+        // ===========================
+        // SCROLL FUNCTIONS
+        // ===========================
+        function scrollToReasons() {
+            document.getElementById('reasons-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToPokemon() {
+            document.getElementById('pokemon-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToBaking() {
+            document.getElementById('baking-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToTimeline() {
+            document.getElementById('timeline-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // ===========================
+        // EASTER EGG FUNCTION
+        // ===========================
+        function revealEasterEgg() {
+            const surpriseSection = document.getElementById('hidden-surprise-section');
+            surpriseSection.style.display = 'flex';
+            surpriseSection.scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function scrollToThankYou() {
+            const thankYouSection = document.getElementById('thank-you-section');
+            thankYouSection.style.display = 'flex';
+            thankYouSection.scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // ===========================
+        // SHAKE TO REVEAL
+        // ===========================
+        let lastShake = 0;
+        let shakeThreshold = 15;
+
+        function initShakeDetection() {
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', handleShake);
+            }
+        }
+
+        function handleShake(event) {
+            const current = Date.now();
+            if (current - lastShake < 1000) return;
+            
+            const acceleration = event.accelerationIncludingGravity;
+            const x = acceleration.x;
+            const y = acceleration.y;
+            const z = acceleration.z;
+            
+            const totalAcceleration = Math.abs(x) + Math.abs(y) + Math.abs(z);
+            
+            if (totalAcceleration > shakeThreshold) {
+                lastShake = current;
+                onShakeDetected();
+            }
+        }
+
+        function onShakeDetected() {
+            // Create massive confetti burst
+            createMassiveConfettiBurst();
+            
+            // Show random reason
+            const randomReason = reasons[Math.floor(Math.random() * reasons.length)];
+            showShakeMessage(randomReason);
+            
+            // Vibration
+            if (navigator.vibrate) {
+                navigator.vibrate([100, 50, 100, 50, 100]);
+            }
+        }
+
+        function showShakeMessage(message) {
+            const shakeMsg = document.createElement('div');
+            shakeMsg.className = 'shake-message';
+            shakeMsg.innerHTML = `<p>${message}</p>`;
+            document.body.appendChild(shakeMsg);
+            
+            setTimeout(() => shakeMsg.remove(), 3000);
+        }
+
+        // ===========================
+        // INTERSECTION OBSERVER FOR TIMELINE
+        // ===========================
+        function initTimelineObserver() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            timelineItems.forEach(item => {
+                observer.observe(item);
+            });
+        }
+
+        // ===========================
+        // INITIALIZE ON PAGE LOAD
+        // ===========================
+        window.addEventListener('DOMContentLoaded', () => {
+            createFloatingHearts();
+            startGame();
+            initTimelineObserver();
+            
+            setTimeout(() => {
+                document.getElementById('reason-text').classList.add('show');
+            }, 100);
+        });
     </script>
 </body>
 </html>
